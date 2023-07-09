@@ -83,10 +83,7 @@ client.on('interactionCreate', async (interaction) => {
     if(interaction.customId === `onay_${user.id}`) {
       interaction.update({ content: `<@${wixua.get(`karaliste`).user}> Kullanıcı başarıyla kara listeden çıkardım`, embeds: [], components: []});
 
-      const kullanıcı = interaction.options.getMember('kullanıcı')
-      let sebep = interaction.options.getString('sebep')
-
-      wixua.delete(`karaliste`, { user: kullanıcı.id, yt: interaction.user.id, sebep: sebep })
+      wixua.delete(`karaliste`)
       
       
     }
