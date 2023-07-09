@@ -9,10 +9,7 @@ module.exports = async(client, interaction) => {
     if (!interaction.guildId) return;
     readdirSync('./commands').forEach(f => {
       const cmd = require(`../commands/${f}`);
-      if(interaction.commandName.toLowerCase() === cmd.name.toLowerCase()) {
-        
-        let kullanıcı = interaction.options.getMember('kullanıcı')
-        let sebep = interaction.options.getString('sebep')
+      if(interaction.commandName.toLowerCase() === cmd.name.toLowerCase()) 
 
 const embed = new EmbedBuilder()
 .setTitle(`❓ Hey, Noluyor`)
